@@ -25,34 +25,29 @@
     nav.show{right:0;}
     .burger{display:flex;}
   }*/
- /* ✅ Mobile Navigation (Final Fixed Version) */
-@media(max-width:768px){
-  nav{
-    display:none; /* hide desktop nav on mobile */
-    position:fixed;
-    top:70px;
-    right:-250px;
-    width:200px;
-    background:#111;
-    flex-direction:column;
-    padding:20px;
-    border-left:3px solid #ffb347;
-    box-shadow:-4px 0 15px rgba(0,0,0,0.3);
-    gap:0;
-    transition:right 0.4s ease;
-  }
-  nav a{
-    padding:12px 0;
-    border-bottom:1px solid rgba(255,255,255,0.05);
-  }
-  nav.show{
-    display:flex;
-    right:0; /* slide in */
-  }
-  .burger{
-    display:flex;
-  }
-}
+ 
+  /* ✅ Mobile Nav */
+  nav{position:fixed;top:70px;right:0;width:200px;background:#111;flex-direction:column;padding:20px;border-left:3px solid #ffb347;box-shadow:-4px 0 15px rgba(0,0,0,0.3);gap:0;transform:translateX(100%);transition:transform 0.3s ease;z-index:105;}
+  nav a{color:#fff;text-decoration:none;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+  nav a:hover{color:#ffb347;}
+  nav.show{transform:translateX(0);}
+
+  /* Hero (Optional Top Banner) */
+  .hero{padding:120px 20px 40px;text-align:center;}
+  .hero h1{font-size:1.8em;color:#ffb347;margin-bottom:10px;}
+  .hero p{opacity:0.85;line-height:1.6;font-size:1em;}
+
+  /* ✅ Mobile Services Layout */
+  .services{padding:30px 20px;background:#0d0d0d;text-align:center;}
+  .services h2{font-size:1.6em;color:#ffb347;margin-bottom:10px;}
+  .services p{max-width:90%;margin:0 auto 25px;opacity:0.85;font-size:1em;line-height:1.5;}
+
+  .service-cards{display:flex;flex-direction:column;gap:20px;align-items:center;}
+  .card{width:100%;max-width:320px;background:#111;padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.4);transition:0.3s;}
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,0,0,0.6);}
+  .card img{width:50px;margin-bottom:10px;}
+  .card h3{color:#ffb347;margin-bottom:5px;}
+  .card p{opacity:0.8;font-size:0.95em;line-height:1.4;}
 
   /* Hero Section */
   .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;text-align:center;overflow:hidden;padding-top:120px;}
