@@ -19,16 +19,21 @@
   nav a:hover::after{width:100%;}
   nav a:hover{color:#ffb347;}
 
-  @media(max-width:989px){
-    nav{
-      display:none; /* hide desktop nav by default */
+  @media (max-width: 989px) {
+    nav {
+      display: none;
       position:fixed;top:70px;right:-250px;width:200px;background:#111;
       flex-direction:column;padding:20px;border-left:3px solid #ffb347;
       box-shadow:-4px 0 15px rgba(0,0,0,0.3);gap:0;transition:0.4s;
     }
     nav a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
-    nav.show{display:flex;right:0;} /* show on click */
-    .burger{display:flex;}
+    nav.show{
+      display:flex;
+      right:0;
+    }
+    .burger{
+      display:flex;
+    }
   }
 
   /* Hero Section */
@@ -167,4 +172,4 @@
   burger.onclick=()=>menu.classList.toggle('show');
 </script>
 </body>
-</html> 
+</html>
